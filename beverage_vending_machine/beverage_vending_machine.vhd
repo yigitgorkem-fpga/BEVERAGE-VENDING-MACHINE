@@ -365,7 +365,7 @@ end if;
 when BREWED_TEA=>
 
 if(sugared_in='1') then 
-    sugared_brewed_tea_provided<='1';
+        sugared_brewed_tea_provided<='1';
 	state<=SUGARED_BREWED_TEA;
 
 elsif(sugarless_in='1') then
