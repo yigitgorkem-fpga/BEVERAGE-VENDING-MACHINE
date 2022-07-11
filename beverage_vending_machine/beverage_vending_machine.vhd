@@ -12,8 +12,8 @@ port(
 
 clk : in std_logic; -- Becasuse we will work with Finite State Macine, we need to indicate clk and reset inputs at entity
 rst: in std_logic;
-
 button : in std_logic;
+
 hot_drink : in std_logic;
 cold_drink:in std_logic;
 
@@ -286,8 +286,8 @@ soda_water_provided <='0';
 --FRUIT_JUICE
 
 apricot_provided <='0';
-peach_provided <='0';
-cherry_provided <='0';
+peach_provided   <='0';
+cherry_provided  <='0';
 
 --LEMONADE
 
@@ -296,7 +296,7 @@ sugarless_lemonade_provided <='0';
 
 --AYRAN
 
-salty_ayran_provided <='0';
+salty_ayran_provided    <='0';
 saltless_ayran_provided <='0';
 
 if(button='1') then
@@ -318,6 +318,7 @@ if(hot_drink='1') then
 	state<=HOT_DRINKS;
 	
 elsif(cold_drink='1') then
+
 	state<=COLD_DRINKS;
 	
 end if;
@@ -365,7 +366,7 @@ end if;
 when BREWED_TEA=>
 
 if(sugared_in='1') then 
-        sugared_brewed_tea_provided<='1';
+    sugared_brewed_tea_provided<='1';
 	state<=SUGARED_BREWED_TEA;
 
 elsif(sugarless_in='1') then
