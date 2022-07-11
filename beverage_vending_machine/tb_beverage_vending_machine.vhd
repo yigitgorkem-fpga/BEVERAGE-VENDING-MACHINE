@@ -10,7 +10,7 @@ end tb_beverage_vending_machine;
 
 architecture Behavioral of tb_beverage_vending_machine is
 
-----------------------------------------COMPONENT-----------------------------------------------------------------------------------------------------------------------
+----------------------------------------COMPONENET-----------------------------------------------------------------------------------------------------------------------
 component beverage_vending_machine is
 
 port(
@@ -57,15 +57,15 @@ sugarless_Turkish_coffee_provided : out std_logic;
 
 
 espresso_in : in std_logic;
-sugared_espresso_provided :  out std_logic;
+sugared_espresso_provided : out std_logic;
 sugarless_espresso_provided : out std_logic;
 
 mocha_in : in std_logic;
-sugared_mocha_provided :   out std_logic;
+sugared_mocha_provided : out std_logic;
 sugarless_mocha_provided : out std_logic;
 
 latte_in: in std_logic;
-sugared_latte_provided :   out std_logic;
+sugared_latte_provided : out std_logic;
 sugarless_latte_provided : out std_logic;
 
 
@@ -75,7 +75,7 @@ sugarless_latte_provided : out std_logic;
 
 
 hot_chocklate_in : in std_logic;
-sugared_hot_chocklate_provided :   out std_logic;
+sugared_hot_chocklate_provided : out std_logic;
 sugarless_hot_chocklate_provided : out std_logic;
 
 
@@ -86,11 +86,11 @@ sugarless_hot_chocklate_provided : out std_logic;
 salep_in : in std_logic;
 
 cinnamoned_salep_in : in std_logic;
-sugared_cinnamoned_salep_provided :   out std_logic;
+sugared_cinnamoned_salep_provided : out std_logic;
 sugarless_cinnamoned_salep_provided : out std_logic;
 
 cinnamonless_salep_in : in std_logic;
-sugared_cinnamonless_salep_provided :   out std_logic;
+sugared_cinnamonless_salep_provided : out std_logic;
 sugarless_cinnamonless_salep_provided : out std_logic;
 
 
@@ -127,7 +127,7 @@ cherry_provided : out std_logic;
 
 lemonade_in :in std_logic;
 
-sugared_lemonade_provided :   out std_logic;
+sugared_lemonade_provided : out std_logic;
 sugarless_lemonade_provided : out std_logic;
 
 --------------------------------------------------------------------------------
@@ -161,11 +161,11 @@ end component;
 signal clk :  std_logic; -- Becasuse we will work with Finite State Macine, we need to indicate clk and reset inputs at entity
 signal rst:  std_logic;
 
-signal  button    :  std_logic;
+signal  button :  std_logic;
 signal  hot_drink :  std_logic;
 signal cold_drink :  std_logic;
 
-signal sugared_in   :  std_logic;
+signal sugared_in :  std_logic;
 signal sugarless_in :  std_logic;
 
 
@@ -174,16 +174,16 @@ signal sugarless_in :  std_logic;
 signal tea_in :  std_logic;
 
 signal brewed_tea_in :  std_logic;
-signal sugared_brewed_tea_provided   :  std_logic;
+signal sugared_brewed_tea_provided :  std_logic;
 signal sugarless_brewed_tea_provided :  std_logic;
 
 
 signal weak_tea_in :  std_logic;
-signal sugared_weak_tea_provided   :  std_logic;
+signal sugared_weak_tea_provided :  std_logic;
 signal sugarless_weak_tea_provided :  std_logic;
 
 signal sage_tea_in :  std_logic;
-signal sugared_sage_tea_provided   :  std_logic;
+signal sugared_sage_tea_provided :  std_logic;
 signal sugarless_sage_tea_provided :  std_logic;
 
 
@@ -200,15 +200,15 @@ signal sugarless_Turkish_coffee_provided :  std_logic;
 
 
 signal espresso_in :  std_logic;
-signal sugared_espresso_provided   :  std_logic;
+signal sugared_espresso_provided :  std_logic;
 signal sugarless_espresso_provided :  std_logic;
 
 signal mocha_in :  std_logic;
-signal sugared_mocha_provided   :  std_logic;
+signal sugared_mocha_provided :  std_logic;
 signal sugarless_mocha_provided :  std_logic;
 
 signal latte_in:  std_logic;
-signal sugared_latte_provided   :  std_logic;
+signal sugared_latte_provided :  std_logic;
 signal sugarless_latte_provided :  std_logic;
 
 
@@ -218,7 +218,7 @@ signal sugarless_latte_provided :  std_logic;
 
 
 signal hot_chocklate_in :  std_logic;
-signal sugared_hot_chocklate_provided   :  std_logic;
+signal sugared_hot_chocklate_provided :  std_logic;
 signal sugarless_hot_chocklate_provided :  std_logic;
 
 
@@ -229,11 +229,11 @@ signal sugarless_hot_chocklate_provided :  std_logic;
 signal salep_in :  std_logic;
 
 signal cinnamoned_salep_in :  std_logic;
-signal sugared_cinnamoned_salep_provided   :  std_logic;
+signal sugared_cinnamoned_salep_provided :  std_logic;
 signal sugarless_cinnamoned_salep_provided :  std_logic;
 
 signal cinnamonless_salep_in :  std_logic;
-signal sugared_cinnamonless_salep_provided   :  std_logic;
+signal sugared_cinnamonless_salep_provided :  std_logic;
 signal sugarless_cinnamonless_salep_provided :  std_logic;
 
 
@@ -253,15 +253,15 @@ signal soda_water_provided :  std_logic;
 
 --------------------- STEPS FOR FRUIT JUICE ------------------------------------
 
-signal fruit_juice_in   :  std_logic;
+signal fruit_juice_in:  std_logic;
 
-signal apricot_in       :  std_logic;
-signal apricot_provided :  std_logic;
+signal apricot_in :  std_logic;
+signal apricot_provided : std_logic;
 
-signal peach_in       :  std_logic;
+signal peach_in :  std_logic;
 signal peach_provided :  std_logic;
 
-signal cherry_in       :  std_logic;
+signal cherry_in :  std_logic;
 signal cherry_provided :  std_logic;
 
 ---------------------------------------------------------------------------------
@@ -391,9 +391,11 @@ rst<='1';
 
 button <='0';
 hot_drink <='0';
+cold_drink<='0';
 
 sugared_in <='0';
 sugarless_in <='0';
+
 
 
 --------------------- STEPS FOR TEA -----------------------------
@@ -446,6 +448,7 @@ soda_water_in <='0';
 
 fruit_juice_in<='0';
 apricot_in <='0';
+cherry_in <='0';
 peach_in <='0';
 cherry_in <='0';
 
@@ -465,6 +468,7 @@ salty_ayran_in <='0';
 saltless_ayran_in <='0';
 
 wait for 100ns;
+
 
 rst<='0';
 wait for clock_period*2;
@@ -1029,7 +1033,7 @@ wait for clock_period*10;
 
 -----------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------
---------------------------------------------CLOD DRINKS----------------------------------------------------------------
+--------------------------------------------COLD DRINKS----------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------
 
@@ -1261,9 +1265,3 @@ wait for clock_period*10;
 
 wait;
 end process;
-
-
-end Behavioral;
-
-
-
