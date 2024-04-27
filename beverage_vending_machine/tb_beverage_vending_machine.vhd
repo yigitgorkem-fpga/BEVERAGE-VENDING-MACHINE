@@ -1265,3 +1265,4 @@ wait for clock_period*10;
 
 wait;
 end process;
+end Behavioral;
